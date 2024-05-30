@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-import { Header } from './components'
-
+import { Header, Product } from './components'
+import products from './products.json'
 function App() {
   const [money, setMoney] = useState(100)
-
-
+const [basket, setBasket] = useState([])
 
   return (
     <>
-    <Header money={money} />
-    <hr /><button onClick={() => setMoney(money + 5)}>add</button>
+<Header money={money} />
+
+{products.map((product, index) => <Product key={index} Product={product}  />)}
+
     </>
   )
 }
