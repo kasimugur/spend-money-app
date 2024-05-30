@@ -1,12 +1,16 @@
 import { useState } from 'react'
 import './App.css'
+import { Header } from './components'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [money, setMoney] = useState(100)
+
+
 
   return (
     <>
-    <h1>spend money app</h1>
+    <Header money={money} />
+    <hr /><button onClick={() => setMoney(money + 5)}>add</button>
     </>
   )
 }
