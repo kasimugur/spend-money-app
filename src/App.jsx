@@ -16,9 +16,7 @@ function App() {
     setMoney,
   }
 
-const resetBasket = () => {
-  setBasket([])
-}
+
 
   useEffect(() => {
     setTotal(
@@ -38,7 +36,7 @@ const resetBasket = () => {
 
         {products.map((product) => <Product key={product.id} Product={product} />)}
         <Basket />
-        <button onClick={resetBasket}>sepeti sıfırla</button>
+        
       </SiteContext.Provider>
     </>
   )
