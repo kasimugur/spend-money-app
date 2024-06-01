@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { Header, Product } from './components'
+import { Basket, Header, Product } from './components'
 import products from './products.json'
 import { SiteContext } from './context'
 function App() {
@@ -15,7 +15,7 @@ function App() {
     setBasket,
     setMoney,
   }
-  
+
 const resetBasket = () => {
   setBasket([])
 }
@@ -37,6 +37,7 @@ const resetBasket = () => {
         <Header />
 
         {products.map((product) => <Product key={product.id} Product={product} />)}
+        <Basket />
         <button onClick={resetBasket}>sepeti sıfırla</button>
       </SiteContext.Provider>
     </>
