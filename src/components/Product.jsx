@@ -3,7 +3,7 @@ import { SiteContext } from "../context"
 
 
 export default function Product({ Product }) {
-  const { basket, setBasket } = useContext(SiteContext)
+  const { basket, setBasket, money, total } = useContext(SiteContext)
 
   const basketItem = basket.find(item => item.id === Product.id)
 
@@ -42,7 +42,7 @@ return (
         <span className="amout">
           {basketItem && basketItem.amount || 0}
         </span>
-        <button onClick={addBasket}>satın al</button>
+        <button disabled={total + Product.price > money}  onClick={addBasket}>satın al</button>
       </div>
       <style >{
         `

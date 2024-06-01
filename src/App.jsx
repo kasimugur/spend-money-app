@@ -9,11 +9,16 @@ function App() {
   const [total, setTotal] = useState(0)
 
   const data = {
+    total,
     money,
     basket,
     setBasket,
     setMoney,
   }
+  
+const resetBasket = () => {
+  setBasket([])
+}
 
   useEffect(() => {
     setTotal(
@@ -29,9 +34,10 @@ function App() {
   return (
     <>
       <SiteContext.Provider value={data}>
-        <Header money={money} />
+        <Header />
 
         {products.map((product) => <Product key={product.id} Product={product} />)}
+        <button onClick={resetBasket}>sepeti sıfırla</button>
       </SiteContext.Provider>
     </>
   )
