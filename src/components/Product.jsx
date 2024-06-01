@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext} from "react"
 import { SiteContext } from "../context"
 
 
@@ -38,7 +38,7 @@ return (
       <h6>{Product.title} </h6>
       <div className="price">${Product.price} </div>
       <div className="actions">
-        <button onClick={removeBasket}>sat</button>
+        <button disabled={!basketItem} onClick={removeBasket}>sat</button>
         <span className="amout">
           {basketItem && basketItem.amount || 0}
         </span>
