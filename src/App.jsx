@@ -34,7 +34,7 @@ function App() {
       <SiteContext.Provider value={data}>
         <Header />
 
-        {products.map((product) => <Product key={product.id} Product={product} />)}
+        <div className="container products">{products.map((product) => <Product key={product.id} Product={product} />)}</div>
         <Basket />
         
       </SiteContext.Provider>

@@ -35,6 +35,7 @@ export default function Product({ Product }) {
 return (
   <>
     <div className="product">
+      <img src={Product.image} alt="" />
       <h6>{Product.title} </h6>
       <div className="price">${Product.price} </div>
       <div className="actions">
@@ -51,6 +52,18 @@ return (
             background: #fff;
             border: 1px solid #ddd;
             margin-bottom:20px;
+            width: 24%
+          }
+          .product img {
+            width:100%
+          }
+          .product h6{
+            font-size: 20px;
+            margin-bottom:10px;
+          }
+          .product .actions{
+            display:flex;
+
           }
 `
       }
