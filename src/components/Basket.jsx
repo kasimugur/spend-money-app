@@ -21,7 +21,7 @@ export default function Basket() {
           <button onClick={resetBasket}>sepeti sıfırla</button>
           </div>
         </div>
-        
+      
       )}
     </>
   )

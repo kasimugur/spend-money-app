@@ -4,7 +4,7 @@ import { Basket, Header, Product } from './components'
 import products from './products.json'
 import { SiteContext } from './context'
 function App() {
-  const [money, setMoney] = useState(100)
+  const [money, setMoney] = useState(1000000)
   const [basket, setBasket] = useState([])
   const [total, setTotal] = useState(0)
 
