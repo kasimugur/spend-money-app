@@ -15,4 +15,13 @@
   font-weight: bold;
   text-align: right;
   color: #34ad34;
+}
+
+.basket-reset-btn {
+  background: #c2b8b8;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #9c9595;
+  font-size: 15px;
+  font-weight: bold;
 }/*# sourceMappingURL=basket.css.map */

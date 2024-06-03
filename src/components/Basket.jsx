@@ -24,7 +24,7 @@ export default function Basket() {
           Toplam: ${total}
           </div>
         
-          <button onClick={resetBasket}>sepeti sıfırla</button>
+          <button className="basket-reset-btn" onClick={resetBasket}>sepeti sıfırla</button>
           
         </div>
       
